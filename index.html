@@ -1,0 +1,37 @@
+<html>
+    <head></head>
+    <body>
+        <h1> chronolite example </h1>
+        <script src="./dist/chronolite.umd.js"></script>
+        <script>
+
+            const first = function(z) {
+                x = 0;
+                y = 0;
+                while(x < 10000) {
+                    x++
+                    y += Math.random() * z;
+                }
+                return y;
+            };
+
+            const second = function(z) {
+                x = 0;
+                y = 0;
+                while(x < 100000) {
+                    x++
+                    y += Math.random() * z;
+                }
+                return y;
+            }
+
+            const time = chronolite.time(first, [5], 10000);
+            console.log(time);
+
+            const arg = [5];
+            const comparision = chronolite.compare(first, arg, second, arg, 10000)
+            console.log(comparision);
+
+        </script>
+    </body>
+</html>
