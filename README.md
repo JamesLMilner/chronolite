@@ -1,4 +1,4 @@
-# chronolite
+# chronolite 🕰️
 
 chronolite is a microlibrary for timing, comparing and benchmarking JavaScript functions. It supports both synchronous and asynchronous functions. Common use cases include performance benchmarking for a function, and benchmarking multiple functions against each other.
 
