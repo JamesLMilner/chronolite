@@ -29,7 +29,7 @@ Methods take objects or arrays of objects of the following schema:
         id: "someFunction", // - string (optional) 
         binding: null // object (optional) - The object to bind the function to (defaults to null)
         fn: someFunc, // function 
-        fnArgs: [1, 2, 3], // array - The array of o
+        fnArgs: [1, 2, 3], // array - The array of arguments
     }
 ```
 
