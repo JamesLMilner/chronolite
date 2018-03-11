@@ -7,13 +7,6 @@
   "scripts": {
     "build": "microbundle"
   },
-  "eslintConfig": {
-    "extends": "eslint-config-developit",
-    "rules": {
-      "prefer-spread": 0,
-      "prefer-rest-params": 0
-    }
-  },
   "devDependencies": {
     "eslint": "^4.16.0",
     "microbundle": "^0.4.3"
