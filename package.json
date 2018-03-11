@@ -7,6 +7,13 @@
   "scripts": {
     "build": "microbundle"
   },
+  "keywords": ["performance", "benchmark", "timing", "timer", "perf", "compare", "functions"],
+  "license": "MIT",
+  "repository": {
+    "type" : "git",
+    "url" : "git@github.com:JamesMilnerUK/chronolite.git"
+  },
+  "bugs": "https://github.com/JamesMilnerUK/chronolite/issues",
   "devDependencies": {
     "eslint": "^4.16.0",
     "microbundle": "^0.4.3"
