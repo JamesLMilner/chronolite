@@ -22,6 +22,17 @@ chronolite has 4 core methods:
 * **compare** - Find the fastest function out of an array of functions
 * **compareAsync** - Find the fastest function out of an array of async functions
 
+Methods take objects or arrays of objects of the following schema:
+
+```javascript
+    {
+        id: "firstFunction", // Optional 
+        binding: null // Optional - The object to bind the function to (defaults to null)
+        fn: first, 
+        fnArgs: arg,
+    }
+```
+
 Here is an example of using the time method:
 
 ```javascript 
