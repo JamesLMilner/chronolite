@@ -37,9 +37,9 @@ Here is an example of using the time method:
 
 ```javascript 
 
-    var timer = new chronolite();
+    const timer = new chronolite();
 
-    var fn = function(input) { 
+    const fn = (input) => { 
 
         // Synthetic wait
         const ms = input * (Math.random() * 1);
@@ -53,15 +53,15 @@ Here is an example of using the time method:
 
     };
 
-    var arg = [10];
-    var iterations = 15;
+    const arg = [10];
+    const iterations = 15;
 
-    var time = timer.time({
+    const time = timer.time({
         fn: first, 
         fnArgs: arg,
     }, iterations);
 
-    console.log("time", time.averageTime);
+    console.log("Average time: ", time.averageTime);
 
 ```
 
