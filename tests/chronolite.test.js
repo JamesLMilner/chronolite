@@ -1,4 +1,4 @@
-const chronolite = require("./../chronolite.js");
+const chronolite = require("./../dist/chronolite.umd.js");
 
 const timer = new chronolite();
 

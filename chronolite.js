@@ -1,4 +1,4 @@
-module.exports = class chronolite {
+export default class chronolite {
 
 	constructor() {
 		this.defaultIterations = 20;
