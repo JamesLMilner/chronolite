@@ -1,6 +1,6 @@
 {
   "name": "chronolite",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "source": "chronolite.js",
   "main": "dist/chronolite.js",
   "module": "dist/chronolite.m.js",
