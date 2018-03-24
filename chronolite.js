@@ -1,5 +1,4 @@
-
-export default class chronolite {
+module.exports = class chronolite {
 
 	constructor() {
 		this.defaultIterations = 20;
@@ -11,21 +10,21 @@ export default class chronolite {
 		if (obj === undefined) {
 			return [false, "passed object is undefined: " + objStr];
 		}
-		if (obj.fn === undefined) {
-			return [false, "function (fn) is undefined: " + objStr];
+		if (typeof obj.fn !== "function") {
+			return [false, "function (fn) is not a function type: " + objStr];
 		}
 		if (obj.fnArgs !== undefined && !Array.isArray(obj.fnArgs)) {
 			return [false, "function args (fnArgs) is not an array: " + objStr];
 		}
-		if (obj.binding !== undefined && typeof obj.binding !== obj) {
-			return [false, "binding is defined but not an object : " + objStr];
+		if (obj.binding !== undefined && typeof obj.binding !== "object") {
+			return [false, "binding is defined but not an object (got " +
+					typeof obj + ") with value: " + objStr];
 		}
 		return [true, ""];
 
 	}
 
 	// Time code
-
 	_setup(fnToTime) {
 		const valid = this.validInput(fnToTime);
 
@@ -157,4 +156,4 @@ export default class chronolite {
 
 	}
 
-}
+};

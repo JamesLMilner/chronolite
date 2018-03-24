@@ -4,7 +4,10 @@ module.exports = {
         "es6": true
     },
     "globals": {
-        "chronolite": true
+        "chronolite": true,
+        "test": true,
+        "expect": true,
+        "require": true,
     },
     "extends": "eslint:recommended",
     "parserOptions": {

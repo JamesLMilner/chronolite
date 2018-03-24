@@ -5,17 +5,28 @@
   "main": "dist/chronolite.js",
   "module": "dist/chronolite.m.js",
   "scripts": {
-    "build": "microbundle"
+    "build": "microbundle",
+    "test": "jest",
+    "test:coverage": "jest --coverage"
   },
-  "keywords": ["performance", "benchmark", "timing", "timer", "perf", "compare", "functions"],
+  "keywords": [
+    "performance",
+    "benchmark",
+    "timing",
+    "timer",
+    "perf",
+    "compare",
+    "functions"
+  ],
   "license": "MIT",
   "repository": {
-    "type" : "git",
-    "url" : "git@github.com:JamesMilnerUK/chronolite.git"
+    "type": "git",
+    "url": "git@github.com:JamesMilnerUK/chronolite.git"
   },
   "bugs": "https://github.com/JamesMilnerUK/chronolite/issues",
   "devDependencies": {
     "eslint": "^4.16.0",
+    "jest": "^22.4.3",
     "microbundle": "^0.4.3"
   }
 }
