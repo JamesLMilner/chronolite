@@ -349,3 +349,40 @@ test("compare should run with default iterations if none passed", (done) => {
 });
 
 
+test("compare fibonnaci generation functions", () => {
+
+	const fibonacciRecursive = (num) => {
+		if (num <= 1) return 1;
+		return fibonacciRecursive(num - 1) + fibonacciRecursive(num - 2);
+	};
+
+	const fibonacciIterative = (num) => {
+		let a = 1, b = 0, temp;
+		
+		while (num >= 0){
+			temp = a;
+			a = a + b;
+			b = temp;
+			num--;
+		}
+		
+		return b;
+	};
+
+	const comparison = timer.compare([
+		{
+			id: "iterative", // Optional
+			fn: fibonacciIterative, 
+			fnArgs: [10],
+		}, 
+		{   
+			id: "recursive", // Optional
+			fn: fibonacciRecursive, 
+			fnArgs: [10],
+		}
+	], 2);
+
+	expect(comparison.fastestIndex).toBe(0);
+	expect(comparison.fastestId).toBe("iterative");
+
+});
