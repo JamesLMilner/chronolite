@@ -6,6 +6,7 @@
   "module": "dist/chronolite.m.js",
   "scripts": {
     "build": "microbundle",
+    "watch": "microbundle watch",
     "test": "jest",
     "test:coverage": "jest --coverage"
   },
@@ -25,8 +26,8 @@
   },
   "bugs": "https://github.com/JamesMilnerUK/chronolite/issues",
   "devDependencies": {
-    "eslint": "^4.16.0",
-    "jest": "^22.4.3",
-    "microbundle": "^0.4.3"
+    "eslint": "5.10.0",
+    "jest": "23.6.0",
+    "microbundle": "0.9.0"
   }
 }
