@@ -12,6 +12,13 @@ For yarn:
 
 ``` yarn add chronolite ```
 
+## CDN 
+
+If you want a drop into your page you can do like so:
+
+```html
+<script src="https://unpkg.com/chronolite@0.0.5/dist/chronolite.umd.js"></script>
+```
 
 ## Usage
 
@@ -69,7 +76,7 @@ Here is an example of using the synchronous time method:
 
 #### Asynchronous Timing
 
-Sometimes your code might be asynchronous and return a promise. Here is an example of using the synchronous time method:
+If your code is asynchronous, and **returns a Promise** you can use the asynchronous timing methods. Unfortunately if it does not return a `Promise` there is no way to determine the function has finished. Here is an example of using the asynchronous time method:
 
 ```javascript 
 
