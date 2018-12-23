@@ -33,7 +33,9 @@ Methods take objects or arrays of objects of the following schema:
     }
 ```
 
-Here is an example of using the time method:
+#### Synchronous Timing
+
+Here is an example of using the synchronous time method:
 
 ```javascript 
 
@@ -63,6 +65,44 @@ Here is an example of using the time method:
 
     console.log("Average time: ", time.averageTime);
 
+```
+
+#### Asynchronous Timing
+
+Sometimes your code might be asynchronous and return a promise. Here is an example of using the synchronous time method:
+
+```javascript 
+
+    const timer = new chronolite();
+
+    const asyncFn = function(input) { 
+
+        return new Promise(function(resolve){
+            // Synthetic wait
+            var ms = input * (Math.random() * 1);
+            var start = Date.now();
+            var now = start;
+            while (now - start < ms) {
+                now = Date.now();
+            }
+
+            resolve ("finished");
+        });
+
+    };
+
+    const arg = [10];
+    const iterations = 15;
+
+    var timeAsync = timer.timeAsync({
+        fn: secondAsync, 
+        fnArgs: arg,
+    }, iterations);
+
+    timeAsync.then(function(result) {
+         console.log("Average time: ", timeAsync.averageTime);
+    });
+   
 ```
 
 ## License
